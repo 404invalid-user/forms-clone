@@ -1,0 +1,26 @@
+{
+  "name": "forms-clone",
+  "version": "1.0.0",
+  "description": "a google forms clone that uses discord auth",
+  "main": "index.js",
+  "scripts": {
+    "run": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "404invalid-user",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chalk": "4.1.2",
+    "chartjs-node-canvas": "^4.1.6",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "ioredis": "^4.28.5",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^6.2.6",
+    "randomstring": "^1.2.2",
+    "uniqid": "^5.4.0"
+  }
+}
