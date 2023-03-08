@@ -1,0 +1,11 @@
+{
+    "name": "forms-clone",
+    "version": "1.0.0",
+    "description": "a google forms clone that uses discord auth",
+    "main": "index.js",
+    "scripts": {
+        "build": "rm -r ./server/www ; cd client ; npm i ; cd .. ; mv ./client/dist ; ./server/www"
+    },
+    "author": "404invalid-user",
+    "license": "MIT"
+}

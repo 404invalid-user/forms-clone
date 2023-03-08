@@ -19,8 +19,8 @@
 <script>
 import axios from "axios";
 // @ is an alias to /src
-import Text from "@/components/Text.vue";
-import Checkbox from "@/components/Checkbox.vue";
+import Text from "@/components/form/Text.vue";
+import Checkbox from "@/components/form/Checkbox.vue";
 
 export default {
   name: "FormAnalytics",

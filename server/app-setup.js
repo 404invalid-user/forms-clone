@@ -7,7 +7,7 @@ module.exports = (app) => {
     ['get', 'post'].forEach(h => {
         require('./handler/' + h)(app);
     })
-    app.use(express.static(__dirname + '/dist'));
+    app.use(express.static(__dirname + '/www'));
     app.get('*', (req, res) => {
         res.status(404).sendFile(path.join(__dirname, '/../www/404.html'))
     })

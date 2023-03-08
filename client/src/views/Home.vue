@@ -7,6 +7,7 @@
       </router-link>
     </nav>
     <Message v-if="message.show" :message="message" />
+    <Toast v-for="toast of toasts" :toast="toast" @click="removeToast(toast.id)"/>
     <div><a class="button new" href="/form/new">New</a></div>
     <div class="forms">
       <div v-for="form of me.forms" :key="form.id">
@@ -15,9 +16,7 @@
         <div>answers: {{ form.answers }}</div>
         <div><a class="button" @click="copy(form.link)">Copy Link</a></div>
         <div>
-          <router-link class="button" :to="'/form/edit?id=' + form.id"
-            >Edit</router-link
-          >
+          <router-link class="button" :to="'/form/edit?id=' + form.id">Edit</router-link>
         </div>
       </div>
     </div>
@@ -38,6 +37,8 @@ export default {
     return {
       me: {},
       message: { content: "", error: false, show: false },
+
+      toasts: []
     };
   },
   methods: {
@@ -49,7 +50,7 @@ export default {
     new() {
       window.location.href = "/new";
     },
-    sendMessage(t) {
+    addToast(t) {
       this.message.content = t;
       this.message.error = false;
       this.message.show = true;
