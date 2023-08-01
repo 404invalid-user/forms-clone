@@ -1,9 +1,6 @@
 const { DataTypes } = require('sequelize');
 
-
 export default function FormQuestion(sequelize: any) {
-
-
     const FormQuestion = sequelize.define('FormQuestion', {
         id: {
             type: DataTypes.INTEGER,
@@ -19,6 +16,11 @@ export default function FormQuestion(sequelize: any) {
             allowNull: false,
             defaultValue: 1
         },
+        pagePosition: {
+            type: DataTypes.INTEGER,
+            allowNull:false,
+            defaultValue: 1
+        },
         title: {
             type: DataTypes.String,
             allowNull: false,
@@ -32,13 +34,13 @@ export default function FormQuestion(sequelize: any) {
             allowNull: false,
             defaultValue:'text'
         },
-
+        
     })
 
 
-    FormAnswer.sync();
+    FormQuestion.sync();
 
-    return FormAnswer;
+    return FormQuestion;
 
 };
 
